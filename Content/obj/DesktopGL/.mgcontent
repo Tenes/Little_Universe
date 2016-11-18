@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SourceFileCollection xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Profile>Reach</Profile>
+  <Platform>DesktopGL</Platform>
+  <Config />
+  <SourceFiles>
+    <File>C:/Users/Enzo/Documents/Visual Studio 2015/Projects/Universe with Star v2.0/UIniverse/Content/spr/planet1.png</File>
+    <File>C:/Users/Enzo/Documents/Visual Studio 2015/Projects/Universe with Star v2.0/UIniverse/Content/spr/Dot.png</File>
+  </SourceFiles>
+</SourceFileCollection>

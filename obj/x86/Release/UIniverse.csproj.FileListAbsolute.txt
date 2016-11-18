@@ -1,0 +1,32 @@
+C:\Users\Enzo\Documents\Visual Studio 2015\Projects\UIniverse\UIniverse\bin\DesktopGL\x86\Release\Content\spr\planet1.xnb
+C:\Users\Enzo\Documents\Visual Studio 2015\Projects\UIniverse\UIniverse\bin\DesktopGL\x86\Release\OpenTK.dll.config
+C:\Users\Enzo\Documents\Visual Studio 2015\Projects\UIniverse\UIniverse\bin\DesktopGL\x86\Release\UIniverse.exe
+C:\Users\Enzo\Documents\Visual Studio 2015\Projects\UIniverse\UIniverse\bin\DesktopGL\x86\Release\UIniverse.pdb
+C:\Users\Enzo\Documents\Visual Studio 2015\Projects\UIniverse\UIniverse\bin\DesktopGL\x86\Release\MonoGame.Framework.dll
+C:\Users\Enzo\Documents\Visual Studio 2015\Projects\UIniverse\UIniverse\bin\DesktopGL\x86\Release\NVorbis.dll
+C:\Users\Enzo\Documents\Visual Studio 2015\Projects\UIniverse\UIniverse\bin\DesktopGL\x86\Release\OpenTK.dll
+C:\Users\Enzo\Documents\Visual Studio 2015\Projects\UIniverse\UIniverse\obj\x86\Release\UIniverse.exe
+C:\Users\Enzo\Documents\Visual Studio 2015\Projects\UIniverse\UIniverse\obj\x86\Release\UIniverse.pdb
+C:\Users\Enzo\Documents\Visual Studio 2015\Projects\UIniverse\UIniverse\bin\DesktopGL\x86\Release\Content\spr\Dot.xnb
+C:\Users\Enzo\Documents\Visual Studio 2015\Projects\UIniverse\UIniverse\obj\x86\Release\UIniverse.csprojResolveAssemblyReference.cache
+C:\Users\Enzo\Documents\Visual Studio 2015\Projects\Universe with Star\UIniverse\bin\DesktopGL\x86\Release\Content\spr\Dot.xnb
+C:\Users\Enzo\Documents\Visual Studio 2015\Projects\Universe with Star\UIniverse\bin\DesktopGL\x86\Release\Content\spr\planet1.xnb
+C:\Users\Enzo\Documents\Visual Studio 2015\Projects\Universe with Star\UIniverse\bin\DesktopGL\x86\Release\OpenTK.dll.config
+C:\Users\Enzo\Documents\Visual Studio 2015\Projects\Universe with Star\UIniverse\bin\DesktopGL\x86\Release\UIniverse.exe
+C:\Users\Enzo\Documents\Visual Studio 2015\Projects\Universe with Star\UIniverse\bin\DesktopGL\x86\Release\UIniverse.pdb
+C:\Users\Enzo\Documents\Visual Studio 2015\Projects\Universe with Star\UIniverse\bin\DesktopGL\x86\Release\MonoGame.Framework.dll
+C:\Users\Enzo\Documents\Visual Studio 2015\Projects\Universe with Star\UIniverse\bin\DesktopGL\x86\Release\NVorbis.dll
+C:\Users\Enzo\Documents\Visual Studio 2015\Projects\Universe with Star\UIniverse\bin\DesktopGL\x86\Release\OpenTK.dll
+C:\Users\Enzo\Documents\Visual Studio 2015\Projects\Universe with Star\UIniverse\obj\x86\Release\UIniverse.exe
+C:\Users\Enzo\Documents\Visual Studio 2015\Projects\Universe with Star\UIniverse\obj\x86\Release\UIniverse.pdb
+C:\Users\Enzo\Documents\Visual Studio 2015\Projects\Universe with Star v2.0\UIniverse\obj\x86\Release\UIniverse.exe
+C:\Users\Enzo\Documents\Visual Studio 2015\Projects\Universe with Star v2.0\UIniverse\obj\x86\Release\UIniverse.pdb
+C:\Users\Enzo\Documents\Visual Studio 2015\Projects\Universe with Star v2.0\UIniverse\bin\DesktopGL\x86\Release\Content\spr\Dot.xnb
+C:\Users\Enzo\Documents\Visual Studio 2015\Projects\Universe with Star v2.0\UIniverse\bin\DesktopGL\x86\Release\Content\spr\planet1.xnb
+C:\Users\Enzo\Documents\Visual Studio 2015\Projects\Universe with Star v2.0\UIniverse\bin\DesktopGL\x86\Release\OpenTK.dll.config
+C:\Users\Enzo\Documents\Visual Studio 2015\Projects\Universe with Star v2.0\UIniverse\bin\DesktopGL\x86\Release\UIniverse.exe
+C:\Users\Enzo\Documents\Visual Studio 2015\Projects\Universe with Star v2.0\UIniverse\bin\DesktopGL\x86\Release\UIniverse.pdb
+C:\Users\Enzo\Documents\Visual Studio 2015\Projects\Universe with Star v2.0\UIniverse\bin\DesktopGL\x86\Release\MonoGame.Framework.dll
+C:\Users\Enzo\Documents\Visual Studio 2015\Projects\Universe with Star v2.0\UIniverse\bin\DesktopGL\x86\Release\NVorbis.dll
+C:\Users\Enzo\Documents\Visual Studio 2015\Projects\Universe with Star v2.0\UIniverse\bin\DesktopGL\x86\Release\OpenTK.dll
+C:\Users\Enzo\Documents\Visual Studio 2015\Projects\Universe with Star v2.0\UIniverse\obj\x86\Release\UIniverse.csprojResolveAssemblyReference.cache
