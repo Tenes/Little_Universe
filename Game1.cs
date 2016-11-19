@@ -34,10 +34,10 @@ namespace UniverseV2
             this.galaxy.Add(new Planet("planet1", new Vector2((float)graphics.PreferredBackBufferWidth / 2 + 300, (float)graphics.PreferredBackBufferHeight / 2), 0.05f, new Vector2(0, -40), Color.SandyBrown));
             this.galaxy.Add(new Planet("planet1", new Vector2((float)graphics.PreferredBackBufferWidth / 2 - 400, (float)graphics.PreferredBackBufferHeight / 2), 0.05f, new Vector2(0, -80), Color.YellowGreen));
             this.galaxy.Add(new Planet("planet1", new Vector2((float)graphics.PreferredBackBufferWidth / 2 + 500, (float)graphics.PreferredBackBufferHeight / 2), 0.05f, new Vector2(0, 90), Color.DarkRed));
-            //this.galaxy.Add(new Planet("planet1", new Vector2((float)graphics.PreferredBackBufferWidth / 2, (float)graphics.PreferredBackBufferHeight / 2 + 300), 0.09f, new Vector2(40, 0), Color.Blue));
-            //this.galaxy.Add(new Planet("planet1", new Vector2((float)graphics.PreferredBackBufferWidth / 2, (float)graphics.PreferredBackBufferHeight / 2 - 300), 0.1f, new Vector2(-50, 0), Color.SandyBrown));
-            //this.galaxy.Add(new Planet("planet1", new Vector2((float)graphics.PreferredBackBufferWidth / 2, (float)graphics.PreferredBackBufferHeight / 2 + 400), 0.05f, new Vector2(-80, 0), Color.YellowGreen));
-            //this.galaxy.Add(new Planet("planet1", new Vector2((float)graphics.PreferredBackBufferWidth / 2, (float)graphics.PreferredBackBufferHeight / 2 - 500), 0.05f, new Vector2(-90, 0), Color.DarkRed));
+            this.galaxy.Add(new Planet("planet1", new Vector2((float)graphics.PreferredBackBufferWidth / 2, (float)graphics.PreferredBackBufferHeight / 2 + 300), 0.05f, new Vector2(40, 0), Color.Blue));
+            this.galaxy.Add(new Planet("planet1", new Vector2((float)graphics.PreferredBackBufferWidth / 2, (float)graphics.PreferredBackBufferHeight / 2 - 300), 0.05f, new Vector2(-50, 0), Color.SandyBrown));
+            this.galaxy.Add(new Planet("planet1", new Vector2((float)graphics.PreferredBackBufferWidth / 2, (float)graphics.PreferredBackBufferHeight / 2 + 400), 0.05f, new Vector2(-80, 0), Color.YellowGreen));
+            this.galaxy.Add(new Planet("planet1", new Vector2((float)graphics.PreferredBackBufferWidth / 2, (float)graphics.PreferredBackBufferHeight / 2 - 500), 0.05f, new Vector2(-90, 0), Color.DarkRed));
 
             this.rng = new Random();
             this.particles = new List<Particles>();
@@ -73,7 +73,7 @@ namespace UniverseV2
                 }
                 
                 for (int planet2 = galaxy.Count - 1; planet2 >= 0; planet2--)
-                    galaxy[planet2].Update(delta, galaxy[planet1], galaxy, rng);
+                    galaxy[planet1].Update(delta, galaxy[planet2], galaxy, rng);
             }
 
             base.Update(gameTime);

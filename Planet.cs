@@ -22,7 +22,6 @@ namespace UniverseV2
         public Vector2 velocity;
         public Vector2 acceleration;
         public Color color;
-        public bool destroyed;
 
 
         public Planet(string imageKey, Vector2 position, float scale, Color color)
@@ -38,7 +37,6 @@ namespace UniverseV2
             this.velocity = new Vector2(0,0);
             this.mass = (10*this.radius);
             this.color = color;
-            this.destroyed = false;
         }
 
         public Planet(string imageKey, Vector2 position, float scale, Vector2 speed, Color color)
@@ -54,21 +52,19 @@ namespace UniverseV2
             this.velocity = speed;
             this.mass = (5 * this.radius);
             this.color = color;
-            this.destroyed = false;
         }
 
 
         //METHODS
         public void Divide(List<Planet> galaxy, Random rng)
         {
-            for (int n = 0; n < 2; n++)
+            if (this.mass > 30)
             {
-                galaxy.Add(new Planet("planet1", new Vector2((float)rng.Next((int)this.position.X-50, (int)this.position.X+50), (float)rng.Next((int)this.position.Y - 50, (int)this.position.Y + 50)), (float)(this.scale/2), new Vector2(rng.Next(-10, 10), rng.Next(-10,10)), this.color));
+                for (int n = 0; n < 4; n++)
+                {
+                    galaxy.Add(new Planet("planet1", new Vector2((float)rng.Next((int)this.position.X - 50, (int)this.position.X + 50), (float)rng.Next((int)this.position.Y - 50, (int)this.position.Y + 50)), (float)(this.scale / 5), new Vector2(rng.Next(-20, 20), rng.Next(-20, 20)), this.color));
+                }
             }
-            this.scale = this.scale/2;
-            this.radius = (this.texture.Width * this.scale) / 2;
-            this.mass = (5*this.radius);
-            this.velocity = new Vector2(rng.Next(-10, 10), rng.Next(-10, 10));
         }
         public void Absorb(double otherMass, float otherRadius, ref double newMass, ref float newRadius, Planet actual)
         {
@@ -101,22 +97,16 @@ namespace UniverseV2
         {
             if (Vector2.Distance(this.position, other.position) < this.radius + other.radius)
             {
-                if (this.mass < other.mass)
+                if (this.mass > other.mass)
                 {
-                    this.destroyed = true;
-                    other.Absorb(this.mass, this.radius, ref other.mass, ref other.radius, other);
-                    galaxy.Remove(this);
-                }
-                else if (this.mass > other.mass)
-                {
-                    other.destroyed = true;
+                    other.Divide(galaxy, rng);
                     this.Absorb(other.mass, other.radius, ref this.mass, ref this.radius, this);
                     galaxy.Remove(other);
                 }
-                else if (this.mass == other.mass)
+                else if (this.mass == other.mass && this.velocity.Length() > other.velocity.Length())
                 {
-                    this.Divide(galaxy, rng);
                     other.Divide(galaxy, rng);
+                    galaxy.Remove(other);
                 }
             }
         }
@@ -138,8 +128,7 @@ namespace UniverseV2
 
         public void Draw(SpriteBatch spriteBatch)
         {
-            if(!this.destroyed)
-                spriteBatch.Draw(this.texture, this.position, null, this.color, 0, this.origin , this.scale, this.effects, this.layerDepth);
+            spriteBatch.Draw(this.texture, this.position, null, this.color, 0, this.origin , this.scale, this.effects, this.layerDepth);
         }
     }
 }

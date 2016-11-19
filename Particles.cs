@@ -34,20 +34,17 @@ namespace UniverseV2
         //METHODS
         public void PushingMouse(Planet planet)
         {
-            if (!planet.destroyed)
+            Vector2 planetPosition = planet.position;
+            float distance = Vector2.Distance(planetPosition, this.position);
+            Vector2.Subtract(ref planetPosition, ref this.position, out planetPosition);
+            float magnitude = planetPosition.Length();
+            if (distance < planet.radius)
             {
-                Vector2 planetPosition = planet.position;
-                float distance = Vector2.Distance(planetPosition, this.position);
-                Vector2.Subtract(ref planetPosition, ref this.position, out planetPosition);
-                float magnitude = planetPosition.Length();
-                if (distance < planet.radius)
-                {
-                    this.acceleration = planetPosition;
-                    Vector2.Multiply(ref this.acceleration, -1 / magnitude * magnitude, out this.acceleration);
-                }
-                else
-                    this.acceleration = new Vector2(0, 0);
+                this.acceleration = planetPosition;
+                Vector2.Multiply(ref this.acceleration, -1 / magnitude * magnitude, out this.acceleration);
             }
+            else
+                this.acceleration = new Vector2(0, 0);
         }
 
         public void UpdateVelocity(float delta)

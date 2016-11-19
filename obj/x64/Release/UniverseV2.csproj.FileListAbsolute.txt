@@ -8,3 +8,4 @@ C:\Users\Enzo\Documents\Visual Studio 2015\Projects\Universe with Star v2.0\UIni
 C:\Users\Enzo\Documents\Visual Studio 2015\Projects\Universe with Star v2.0\UIniverse\bin\x64\Release\OpenTK.dll
 C:\Users\Enzo\Documents\Visual Studio 2015\Projects\Universe with Star v2.0\UIniverse\obj\x64\Release\UIniverse.exe
 C:\Users\Enzo\Documents\Visual Studio 2015\Projects\Universe with Star v2.0\UIniverse\obj\x64\Release\UIniverse.pdb
+C:\Users\Enzo\Documents\Visual Studio 2015\Projects\Universe with Star v2.0\UIniverse\obj\x64\Release\UniverseV2.csprojResolveAssemblyReference.cache
