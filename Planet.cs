@@ -60,11 +60,15 @@ namespace UniverseV2
         {
             if (this.mass > 30)
             {
-                for (int n = 0; n < 4; n++)
+                for (int n = 0; n < 5; n++)
                 {
-                    galaxy.Add(new Planet("planet1", new Vector2((float)rng.Next((int)this.position.X - 50, (int)this.position.X + 50), (float)rng.Next((int)this.position.Y - 50, (int)this.position.Y + 50)), (float)(this.scale / 5), new Vector2(rng.Next(-20, 20), rng.Next(-20, 20)), this.color));
+                    galaxy.Add(new Planet("planet1", new Vector2((float)rng.Next((int)this.position.X - 50, (int)this.position.X + 50), (float)rng.Next((int)this.position.Y - 50, (int)this.position.Y + 50)), (float)(this.scale / 2), new Vector2(rng.Next(-20, 20), rng.Next(-20, 20)), this.color));
                 }
             }
+            this.scale /= 2;
+            this.radius = (this.texture.Width * this.scale) / 2;
+            this.mass = (5 * this.radius);
+
         }
         public void Absorb(double otherMass, float otherRadius, ref double newMass, ref float newRadius, Planet actual)
         {
@@ -77,7 +81,6 @@ namespace UniverseV2
             this.position.X += this.velocity.X * delta;
             this.position.Y += this.velocity.Y * delta;
         }
-
         public void CalculateGravity(Planet other)
         {
             Vector2 dist = new Vector2(other.position.X - this.position.X, other.position.Y - this.position.Y);
@@ -85,12 +88,12 @@ namespace UniverseV2
             this.acceleration.X += (float)(other.mass * (dist.X / length));
             this.acceleration.Y += (float)(other.mass * (dist.Y / length));
         }
-
         public void ApplyAcceleration(float delta)
         {
-            this.velocity.X += (float)(this.acceleration.X * delta * 0.02);
-            this.velocity.Y += (float)(this.acceleration.Y * delta * 0.02);
-            this.acceleration = new Vector2(0,0);
+            this.velocity.X += (float)(this.acceleration.X * delta);
+            this.velocity.Y += (float)(this.acceleration.Y * delta);
+            this.acceleration.X = 0;
+            this.acceleration.Y = 0;
         }
 
         public void CollisionWith(Planet other, List<Planet> galaxy, Random rng)
@@ -100,13 +103,11 @@ namespace UniverseV2
                 if (this.mass > other.mass)
                 {
                     other.Divide(galaxy, rng);
-                    this.Absorb(other.mass, other.radius, ref this.mass, ref this.radius, this);
-                    galaxy.Remove(other);
+                    //this.Absorb(other.mass, other.radius, ref this.mass, ref this.radius, this);
                 }
                 else if (this.mass == other.mass && this.velocity.Length() > other.velocity.Length())
                 {
                     other.Divide(galaxy, rng);
-                    galaxy.Remove(other);
                 }
             }
         }
@@ -115,13 +116,8 @@ namespace UniverseV2
         {
             if (this != planet2 )
             {
-                this.CollisionWith(planet2, galaxy, rng);
                 this.CalculateGravity(planet2);
-            }
-            if (this != galaxy[0])
-            {
-                this.ApplyAcceleration(delta);
-                this.UpdatePosition(delta);
+                this.CollisionWith(planet2, galaxy, rng);
             }
 
         }
